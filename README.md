@@ -1,5 +1,4 @@
 # Ansible Role: DDClient
-[![Build Status](https://travis-ci.com/mivek/ansible-role-ddclient.svg?token=Nxd1CoxuZDnwzK6Yq6sV&branch=master)](https://travis-ci.com/mivek/ansible-role-ddclient)
 =========
 
 This role installs and launches a [ddclient](https://ddclient.net/) service.
@@ -71,7 +70,7 @@ Including an example of how to use your role (for instance, with variables passe
             name: ddclient
           vars:
             daemon: 60
-            configs:
+            ddclient_configs:
               -
                 protocol: dyndns2
                 login: myLogin
