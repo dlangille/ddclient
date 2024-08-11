@@ -1,7 +1,10 @@
-# Ansible Role: DDClient
+\# Ansible Role: DDClient
 =========
 
 This role installs and launches a [ddclient](https://ddclient.net/) service.
+
+This has been forked from: [mivek.ddclient](https://github.com/mivek/ansible-role-ddclient)
+
 
 ## Requirements
 ------------
