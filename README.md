@@ -1,18 +1,12 @@
-\# Ansible Role: DDClient
-=========
-
-This role installs and launches a [ddclient](https://ddclient.net/) service.
-
+# Ansible Role: DDClient
+This role installs and launches a [ddclient](https://ddclient.net/) service.  
 This has been forked from: [mivek.ddclient](https://github.com/mivek/ansible-role-ddclient)
 
 
 ## Requirements
-------------
-
 None
 
 ## Role Variables
---------------
 Variables are from [ddclient configuration](https://ddclient.net/usage.html#usage)
 
 ### Default variables
@@ -40,8 +34,8 @@ ddclient_configs:
       - host
 
 ```
-### Vars variable
 
+### Vars variable
 ```(yaml)
 __ddclient_configuration_directory: /etc/ddclient
 __ddclient_configuration_location: "{{ __ddclient_configuration_directory }}/ddclient.conf"
@@ -57,13 +51,9 @@ __ddclient_prerequisite:
 ```
 
 ## Dependencies
-------------
-
 None
 
 ## Example Playbook
-----------------
-
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
@@ -87,8 +77,6 @@ Including an example of how to use your role (for instance, with variables passe
                 hosts:
                   - myhost.dyndns.org
 ## License
--------
-
 MIT
 
 
