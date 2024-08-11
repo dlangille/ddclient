@@ -4,7 +4,6 @@
 daemon={{ ddclient_daemon }}
 ssl={{ ddclient_ssl }}
 syslog=yes
-
 {% for config in ddclient_configs %}
 {% if config.use is defined and config.use %}
 use={{ config.use }}
@@ -25,7 +24,6 @@ mxpri={{ config.mxpri }},
 {% if config.zone is defined and config.zone %}
 zone={{ config.zone }}
 {% endif %}
-
 login={{ config.login }}
 password={{ config.password }}
 {{ config.hosts|join(', ')}}
