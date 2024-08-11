@@ -30,4 +30,6 @@
     owner: root
     group: root
     mode: 0644
-  notify: configure_systemd
+  notify:
+    - Disable_Service_DDClient
+    - Enable_Service_DDClient

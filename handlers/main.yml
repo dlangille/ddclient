@@ -1,6 +1,11 @@
 ---
-- name: configure_systemd
+- name: Disable_Service_DDClient
+  ansible.builtin.service:
+    name: ddclient
+    enabled: false
+    state: stopped
+- name: Enable_Service_DDClient
   ansible.builtin.service:
     name: ddclient
     enabled: true
-    state: restarted
+    state: reloaded
