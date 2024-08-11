@@ -6,7 +6,13 @@ After=network.target network-online.target
 
 [Service]
 Type=forking
+{% if ansible_os_family == 'RedHat' %}
+ExecStart=/usr/sbin/ddclient -file {{ __ddclient_configuration_location }}
+{% elif ansible_os_family == 'Debian' %}
 ExecStart=/usr/bin/ddclient -file {{ __ddclient_configuration_location }}
+{% else %}
+ExecStart=/usr/bin/ddclient -file {{ __ddclient_configuration_location }}
+{% endif %}
 
 [Install]
 WantedBy=multi-user.target
