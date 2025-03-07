@@ -26,3 +26,4 @@ ddclient_configs:
 ddclient_owner: root
 ddclient_group: root
 ddclient_specify_cache: false
+__ddclient_configuration_directory_mode: 0750

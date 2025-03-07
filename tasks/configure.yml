@@ -5,7 +5,7 @@
     state: directory
     owner: "{{ ddclient_owner }}"
     group: "{{ ddclient_group }}"
-    mode: 0750
+    mode: "{{ __ddclient_configuration_directory_mode }}"
 
 - name: Create configuration file
   ansible.builtin.template:

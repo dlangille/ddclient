@@ -7,3 +7,4 @@
     ddclient_owner: "root" 
     ddclient_group: "wheel" 
     __ddclient_configuration_directory: /usr/local/etc/
+    __ddclient_configuration_directory_mode: 0755
