@@ -28,6 +28,9 @@ mxpri={{ config.mxpri }},
 {% if config.zone is defined and config.zone %}
 zone={{ config.zone }}
 {% endif %}
+{% if config.ttl is defined and config.ttl %}
+ttl={{ config.ttl }}
+{% endif %}
 login={{ config.login }}
 password={{ config.password }}
 {{ config.hosts|join(', ')}}
