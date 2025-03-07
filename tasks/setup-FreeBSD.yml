@@ -2,3 +2,8 @@
   community.general.pkgng:
     name: ddclient
     state: present
+
+- ansible.builtin.set_fact:
+    ddclient_owner: "root" 
+    ddclient_group: "wheel" 
+    __ddclient_configuration_directory: /usr/local/etc/

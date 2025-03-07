@@ -1,9 +1,13 @@
 #jinja2: trim_blocks: True
-# {{ ansible_managed  }}
+# {{ ansible_managed }}. Template: {{ template_fullpath }}
 
 daemon={{ ddclient_daemon }}
 ssl={{ ddclient_ssl }}
 syslog=yes
+{% if ddclient_specify_cache %}
+cache={{ __ddclient_cache_directory }}/ddclient.cache
+{% endif %}
+
 {% for config in ddclient_configs %}
 {% if config.use is defined and config.use %}
 use={{ config.use }}
